@@ -3,7 +3,7 @@
   // 1:12:31
   export async function load({ fetch }) {
     const url = 
-      `https://api.themoviedb.org/3/movie/popular?api_key=56d7cc636840c4b7265c305a22ba1519`;
+      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_URL}`;
     const res = await fetch(url);
     const data = await res.json();
     if (res.ok) {
